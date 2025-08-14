@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Primer Sitio Web</title>
+</head>
+<body>
+    <header>
+        <h1>Bienvenido a Mi Primer Sitio Web</h1>
+    </header>
+    <nav>
+        <a href="/home.html">Inicio</a>
+        <a href="/about.html">Acerca de</a>
+        <a href="/contact.html">Contacto</a>
+    </nav>
+    <div class="container">
+        <section>
+            <h2>Inicio</h2>
+            <p>¡Hola! Este es un ejemplo básico de un sitio web hecho con HTML. Aquí puedes ver algunos
+                de los elementos y etiquetas más comunes.</p>
+            <img src="https://via.placeholder.com/600x300" alt="Imagen de ejemplo">
+        </section>
+        <section id="about">
+            <h2>Acerca de</h2>
+            <p>Esta seccion contiene información sobre el sitio web y su propósito.</p>
+            <ul>
+                <li>Elemento de lista 1</li>
+                <li>Elemento de lista 2</li>
+                <li>Elemento de lista 3</li>
+            </ul>
+            <ol>
+                <li>Elemento ordenado 1</li>
+                <li>Elemento ordenado 2</li>
+                <li>Elemento ordenado 3</li>
+            </ol>
+        </section>
+        <section id="contact">
+            <h2>Contacto</h2>
+            <form action="/submit_form" method="post">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required><br><br>
+
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="message">Mensaje:</label><br>
+                <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+
+                <input type="submit" value="Enviar">
+            </form>
+        </section>
+        <section>
+            <h2>Tabla de Datos</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Encabezado 1</th>
+                        <th>Encabezado 2</th>
+                        <th>Encabezado 3</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Dato 1</td>
+                        <td>Dato 2</td>
+                        <td>Dato 3</td>
+                    </tr>
+                    <tr>
+                        <td>Dato 4</td>
+                        <td>Dato 5</td>
+                        <td>Dato 6</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2020 Mi Primer Sitio Web. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
