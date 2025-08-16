@@ -9,9 +9,21 @@ body {
     padding: 20px;
 }
 
+p {
+    text-align: center;
+}
+
+h2 {
+    font-size: 2.2em;
+    margin-bottom: 20px;
+    color: #000000;
+    text-align: center;
+    position: relative;
+}
+
 /* Estilos para el header */
 header {
-    background-image: url('https://wallpapers.com/images/hd/cool-roblox-pictures-x3iejrikoxz40xtq.jpg');
+    background-image: url('/img/roblox-header.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -27,13 +39,14 @@ header h1 {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
+/* Estilos para el menú de navegación */
 nav {
     background-color: rgba(0, 0, 0, 0.9);
     padding: 15px 20px;
     text-align: center;
     margin-bottom: 5px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-    /*Sombra*/
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /*Sombra*/
+    gap: 10px;
 }
 
 nav a {
@@ -41,6 +54,13 @@ nav a {
     text-decoration: none;
     margin: 0 15px;
     font-size: 1.2em;
+
+}
+
+/* Estilos para al pasar el mouse sobre los enlaces de navegación */
+nav a:hover {
+    text-decoration: underline;
+    color: #ececec;
 }
 
 .container {
@@ -50,21 +70,32 @@ nav a {
 }
 
 /*Estilos para las secciones*/
-section h2 {
-    font-size: 2.2em;
-    margin-bottom: 20px;
-    color: #000000;
-    text-align: center;
-    position: relative;
-}
 
 .elemento {
     background: white;
     padding: 25px;
     border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    /*Sombra*/
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /*Sombra*/
     text-align: center;
+    transition: all 0.3s ease;
+}
+
+.elemento:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    background: #f8fafc;
+}
+
+.why{
+    display: flex;
+    gap: 20px;
+}
+
+/* Estilos para los íconos */
+.feature-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    display: block;
 }
 
 /*Estilo para los títulos de los elementos*/
@@ -76,18 +107,19 @@ section h2 {
 
 /*Estilos para la tabla*/
 table {
-    width: 100%;
-    border-collapse: collapse;
-    /*Elimina espacios entre los bordes*/
-    background: white;
+    width: 80%;
+    margin: 20px auto;
+    border-spacing: 0;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-
+    border-radius: 10px;
+    overflow: hidden;
 }
 
-thead {
-    background: linear-gradient(#4e6ccd);
-    /*Cambia los colores*/
+th {
+    background: linear-gradient(#4e6ccd); /* Degradado de color */
     color: rgb(255, 255, 255);
+    padding: 12px 15px;
+    text-align: left;
 }
 
 th,
@@ -95,6 +127,7 @@ td {
     padding: 10px;
     text-align: left;
 }
+
 
 /*Estilos para footer*/
 footer {
@@ -111,13 +144,21 @@ footer {
     margin: 30px 0;
 }
 
+/* Estilos para los cuadros de datos interesantes*/
 .datorecuadro {
     background: white;
     padding: 30px 20px;
     border-radius: 10px;
     text-align: center;
-    box-shadow: 0 4px 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     border-left: 5px solid #4e6ccd;
+    transition: all 0.3s ease;
+}
+
+.datorecuadro:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    background: #f8fafc;
 }
 
 .stat-number {
@@ -127,23 +168,28 @@ footer {
     margin-bottom: 10px;
 }
 
-/*Estilos para recomendaciones*/
+/*Estilos para cartas de recomendaciones*/
 .section-description {
     text-align: center;
 
 }
 
 .game-card {
+    width: 70%; /* Ajusta el ancho de las cartas al 70% */
+    margin: 30px auto;
     background: white;
     border-radius: 15px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
     position: relative;
+    text-align: center;
 }
 
+/* Estilos para las cartas de recomendaciones */
 .game-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    background: #f8fafc; /* Color de fondo de la carta al pasar el mouse */
 }
 
 .game-badge {
@@ -159,11 +205,11 @@ footer {
 }
 
 .game-image {
-    width: 30%;
+    padding-top: 20px;
+    width: 30%; /* Ajusta el ancho de la imagen al 30% */
     height: auto;
     object-position: center;
     object-fit: cover; /* Mantiene la proporción sin deformar */
-
 }
 
 .game-info {
@@ -182,7 +228,8 @@ footer {
     margin-bottom: 8px;
 }
 
-.game-rating {
+#game-rating {
+    color: #fbbf24;
     font-size: 1.2em;
     margin-bottom: 10px;
 }
@@ -198,4 +245,101 @@ footer {
     justify-content: space-between;
     font-size: 0.9em;
     color: #373737;
+}
+
+/*Estilos para el formulario de recomendaciones*/
+.recomendaciones-container {
+    padding: 20px;
+    background: #f8fafc;
+}
+
+.form {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.form-body {
+    background: white;
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(39, 38, 38, 0.1);
+    border: 1px solid #e2e8f0;
+}
+
+/* Estilos para el formulario de recomendaciones, con esto nos aseguramos que cada campo se distribuya correctamente */
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group select {
+    width: 90%;
+    padding: 0.9rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #374151;
+    transition: all 0.3s ease;
+}
+
+/* Estilos para el estado de enfoque */
+.form-group input:focus,
+.form-group select:focus{
+    outline: none;
+    border-color: #00a2ff;
+    box-shadow: 0 0 0 3px rgba(0, 162, 255, 0.1);
+}
+
+#categoria{
+    width: 95%;
+}
+
+/*Estilos para estrellas de calificación*/
+.star {
+    font-size: 2rem;
+    color: #e2e8f0;
+    
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+/* Nota: lo hicimos solo para dar la aminacion por que para que mantengan el color amarillo es necesario utilizar JS*/
+.star.active,
+.star:hover {
+    color: #fbbf24; /* Color amarillo para las estrellas activas o al pasar el mouse */
+}
+
+/* Estilos para el botón de envío */
+.submit-button {
+    width: 50%;
+    margin: 22px auto 0; 
+    background: #4e6ccd;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.submit-button:hover {
+    background: #3b5b99;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
 }
