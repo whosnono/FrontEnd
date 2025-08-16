@@ -11,13 +11,39 @@
         <h1>Bienvenido a Mi Primer Sitio Web sobre Roblox</h1>
     </header>
     <nav>
-        <a href="/home.html">Inicio</a>
-        <a href="/about.html">Acerca de</a>
-        <a href="/contact.html">Contacto</a>
+        <a href="/home.html" class="nav-link">Inicio</a>
+        <a href="/about.html" class="nav-link">Acerca de</a>
+        <a href="/contact.html" class="nav-link">Recomendaciones</a>
     </nav>
+
+    <div class="container">
+        <section class="topjuego">
+            <h2>Top Juego del Mes</h2>
+            <div class="container">
+            <p class="section-description">Nuestras recomendaciones principales basadas en popularidad, calidad y diversión.</p>
+
+            <div class="games-grid">
+                <div class="game-card featured">
+                    <div class="game-badge">#1</div>
+                    <img src="https://www.gamespace.com/wp-content/uploads/2022/11/Blox-Fruits.jpg" alt="Blox Fruits" class="game-image">
+                    <div class="game-info">
+                        <h3>Blox Fruits</h3>
+                        <p class="game-genre">RPG/Aventura</p>
+                        <div class="game-rating">★★★★★</div>
+                        <p class="game-description">Inspirado en One Piece. Encuentra frutas de la serie, lucha contra jefes y explora islas.</p>
+                        <div class="game-stats">
+                            <span>25M+ jugadores</span>
+                            <span>13+ años</span>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        </div>
+
     <div class="container">
         <section id="contact">
             <h2>Contacto</h2>
+            <pS>Si tienes alguna pregunta o comentario, no dudes en ponerte en contacto con nosotros.</p>
             <form action="/submit_form" method="post">
                 <label for="name">Nombre:</label>
                 <input type="text" id="name" name="name" required><br><br>
